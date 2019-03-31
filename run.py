@@ -19,6 +19,12 @@ luckydata = [line for line in table_lucky.split('\n') if line.strip()]
 print(bonusdata)
 print(luckydata)
 
+with open('bonusdata.txt', 'a+') as fileobj:
+    fileobj.write(table_bonus)
+
+with open('luckydata.txt', 'a+') as fileobj:
+    fileobj.write(table_lucky)
+
 # TODO: create an excel sheet or plot the results in a graph
 # preferable pygal and renter it to a website
 
