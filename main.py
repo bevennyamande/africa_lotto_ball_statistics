@@ -1,6 +1,7 @@
 import requests
 import pygal
 from bs4 import BeautifulSoup
+import numpy as np
 
 # two most interesting urls
 africa_lotto__url = 'https://africalotto.co.zw/statistics-bonus-lotto-two'
@@ -15,7 +16,7 @@ def scrap_africa_lotto(africa_lotto__url: str):
         with open('bonusdata.txt', 'a+') as fileobj:
             fileobj.write(bonus_ball_table)
     except Exception as e:
-        print(e)
+        pass
     return bonusdata
 
 
@@ -25,7 +26,7 @@ def clean_saved_data(filename):
             print(line)
 
 if __name__ == '__main__':
-    # scrap_africa_lotto(africa_lotto__url)
+    scrap_africa_lotto(africa_lotto__url)
     clean_saved_data('bonusdata.txt')
 
 # TODO: create an excel sheet or plot the results in a graph
