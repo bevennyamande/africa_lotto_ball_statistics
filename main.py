@@ -6,7 +6,7 @@ import numpy as np
 # two most interesting urls
 africa_lotto__url = 'https://africalotto.co.zw/statistics-bonus-lotto-two'
 
-def scrap_africa_lotto(africa_lotto__url: str):
+def scrap_africa_lotto(africa_lotto__url):
     bonusdata = []
     try:
         balls = requests.get(africa_lotto__url)
