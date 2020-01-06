@@ -28,7 +28,3 @@ def clean_saved_data(filename):
 if __name__ == '__main__':
     scrap_africa_lotto(africa_lotto__url)
     clean_saved_data('bonusdata.txt')
-
-# TODO: create an excel sheet or plot the results in a graph
-# preferable pygal and renter it to a website
-
